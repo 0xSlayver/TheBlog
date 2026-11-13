@@ -1,20 +1,7 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
-import { cn } from '@/lib/utils';
 import { ThemeProvider } from 'next-themes';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+import { chubbo, supreme } from '@/fonts';
 
 export const metadata: Metadata = {
   title: '0xSlayver',
@@ -26,14 +13,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     <html
       lang='en'
       suppressHydrationWarning
-      className={cn(
-        'h-full',
-        'antialiased',
-        geistSans.variable,
-        geistMono.variable,
-        'font-sans',
-        inter.variable,
-      )}
+      className={`${chubbo.variable} ${supreme.variable}`}
     >
       <body>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
