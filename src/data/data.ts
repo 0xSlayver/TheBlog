@@ -12,7 +12,7 @@ export const articles: Article[] = [
     title: 'Understanding Next.js App Router and Server Components',
     summary:
       'A beginner-friendly guide to how React Server Components reduce bundle sizes and speed up page loads in Next.js.',
-    author: 'Sarah Jenkins',
+    author: '0xSlayver',
     date: new Date('2026-10-12'),
     category: 'Web Development',
     articleContent: `Next.js introduced the App Router to make building full-stack React applications faster and more intuitive. By default, every component inside the app directory is a React Server Component.
@@ -25,7 +25,7 @@ export const articles: Article[] = [
     title: 'Why Minimalist Workspace Setups Boost Daily Focus',
     summary:
       'Clutter competes for your visual attention. Here is how clearing your desk can improve deep work sessions.',
-    author: 'Marcus Vance',
+    author: '0xSlayver',
     date: new Date('2026-10-25'),
     category: 'Productivity',
     articleContent: `Your physical environment plays a massive role in your mental clarity. When your desk is covered in sticky notes, tangled cables, and half-empty coffee mugs, your brain constantly processes those items in the background.
@@ -38,7 +38,7 @@ export const articles: Article[] = [
     title: '5 Essential SQL Indexing Tips for Faster Queries',
     summary:
       'Learn how database indexes work under the hood and when adding one actually slows down your application.',
-    author: 'Elena Rostova',
+    author: '0xSlayver ',
     date: new Date('2026-11-02'),
     category: 'Databases',
     articleContent: `As your blog grows from ten articles to ten thousand, unoptimized database queries will noticeably slow down your website. An index acts just like the index at the back of a textbook, allowing the database to jump straight to the right row instead of scanning the entire table.
@@ -51,7 +51,7 @@ export const articles: Article[] = [
     title: 'How to Brew Pour-Over Coffee Like a Specialty Barista',
     summary:
       'Master water temperature, grind size, and pouring technique to unlock sweeter, cleaner flavors at home.',
-    author: 'David Chen',
+    author: '0xSlayver',
     date: new Date('2026-11-09'),
     category: 'Lifestyle',
     articleContent: `Great pour-over coffee comes down to controlling extraction. If your coffee tastes bitter and hollow, it is over-extracted; if it tastes sour and salty, it is under-extracted.
