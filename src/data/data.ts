@@ -1,4 +1,4 @@
-export type Article = {
+export type ArticleType = {
   title: string;
   summary: string;
   author: string;
@@ -7,7 +7,7 @@ export type Article = {
   articleContent: string;
 };
 
-export const articles: Article[] = [
+export const articles: ArticleType[] = [
   {
     title: 'Understanding Next.js App Router and Server Components',
     summary:
