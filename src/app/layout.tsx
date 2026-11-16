@@ -15,7 +15,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       suppressHydrationWarning
       className={`${chubbo.variable} ${supreme.variable}`}
     >
-      <body>
+      <body className='m-auto min-h-dvh max-w-3xl px-4 sm:px-6'>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           {children}
         </ThemeProvider>
