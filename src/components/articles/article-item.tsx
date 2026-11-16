@@ -7,13 +7,17 @@ function ArticleItem({ article }: { article: ArticleType }) {
     <div className='group/allArticles'>
       <Link
         href={''}
-        className='my-1.5 flex flex-col rounded p-3 transition hover:bg-gray-400/5'
+        className='my-2 flex flex-col rounded p-1 transition hover:bg-gray-400/5 sm:p-2'
       >
-        <div className='leading-relaxed'>
-          <p className='font-heading text-2xl tracking-wide'>{article.title}</p>
-          <p className='tracking-wide'>{article.summary}</p>
+        <div className='flex flex-col gap-1'>
+          <p className='font-heading text-lg tracking-wide sm:text-xl'>
+            {article.title}
+          </p>
+          <p className='line-clamp-2 text-sm tracking-wide sm:text-base'>
+            {article.summary}
+          </p>
         </div>
-        <div className='flex flex-wrap items-center gap-2.5 pt-2 text-sm italic'>
+        <div className='flex flex-wrap items-center gap-1.5 pt-2 text-xs italic sm:gap-2.5 sm:text-sm'>
           <span>{article.author}</span>
           <Separator orientation='vertical' />
           <span>{article.category}</span>

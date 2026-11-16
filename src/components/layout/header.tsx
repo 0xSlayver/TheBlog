@@ -11,7 +11,7 @@ function header() {
         <Logo />
 
         <div className='flex items-center gap-5'>
-          <nav className='list-none capitalize'>
+          <nav className='hidden list-none capitalize sm:block'>
             <li className='flex gap-5'>
               <ul>
                 <Link href={homePage()}>home</Link>
@@ -22,7 +22,7 @@ function header() {
             </li>
           </nav>
 
-          <Separator orientation='vertical' />
+          <Separator orientation='vertical' className='hidden sm:block' />
 
           <ThemeSwitcher />
         </div>

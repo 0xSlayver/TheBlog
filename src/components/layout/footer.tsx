@@ -7,10 +7,10 @@ function Footer() {
     <>
       <Separator />
 
-      <footer className='flex items-center justify-center gap-10 py-7'>
+      <footer className='flex flex-col items-center justify-center gap-5 py-3.5 sm:flex-row sm:gap-10 sm:py-7'>
         <Logo />
 
-        <div className='flex gap-5'>
+        <div className='flex gap-5 text-sm sm:text-base'>
           <Link href={''}>LinkedIn</Link>
           <Link href={''}>Github</Link>
           <Link href={''}>About</Link>
