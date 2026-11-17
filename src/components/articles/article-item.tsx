@@ -1,12 +1,14 @@
 import { Separator } from '@/components/ui/separator';
 import { ArticleType } from '@/data/data';
+import { individualArticlePage } from '@/paths';
 import Link from 'next/link';
 
 function ArticleItem({ article }: { article: ArticleType }) {
   return (
     <div className='group/allArticles'>
       <Link
-        href={''}
+        prefetch
+        href={individualArticlePage(article.title)}
         className='my-2 flex flex-col rounded p-1 transition hover:bg-gray-400/5 sm:p-2'
       >
         <div className='flex flex-col gap-1'>

@@ -1,5 +1,5 @@
 export const homePage = () => '/';
 export const aboutPage = () => '/about';
 
-export const articlesPage = () => '/articles';
-export const individualArticlePage = (id: number | string) => `articles/${id}`;
+export const allArticlesPage = () => '/articles';
+export const individualArticlePage = (id: string) => `articles/${id}`;
