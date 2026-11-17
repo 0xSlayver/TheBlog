@@ -7,7 +7,7 @@ import Link from 'next/link';
 function header() {
   return (
     <>
-      <header className='flex items-center justify-between px-1 py-5'>
+      <header className='flex items-center justify-between border-b px-1 py-5'>
         <Logo />
 
         <div className='flex items-center gap-5'>
@@ -27,8 +27,6 @@ function header() {
           <ThemeSwitcher />
         </div>
       </header>
-
-      <Separator />
     </>
   );
 }

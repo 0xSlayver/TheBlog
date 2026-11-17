@@ -9,7 +9,7 @@ function ArticleItem({ article }: { article: ArticleType }) {
       <Link
         prefetch
         href={individualArticlePage(article.title)}
-        className='my-2 flex flex-col rounded p-1 transition hover:bg-gray-400/5 sm:p-2'
+        className='my-1 flex flex-col rounded p-1 transition hover:bg-gray-400/10 sm:p-2 dark:hover:bg-gray-400/5'
       >
         <div className='flex flex-col gap-1'>
           <p className='font-heading text-lg tracking-wide sm:text-xl'>

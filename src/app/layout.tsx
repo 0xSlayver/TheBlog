@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { chubbo, supreme } from '@/fonts';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   title: '0xSlayver',
@@ -15,9 +17,11 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       suppressHydrationWarning
       className={`${chubbo.variable} ${supreme.variable}`}
     >
-      <body className='m-auto min-h-dvh max-w-3xl px-4 sm:px-6'>
+      <body className='m-auto flex min-h-dvh max-w-3xl flex-col px-4 sm:px-6'>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-          {children}
+          <Header />
+          <main className='flex flex-1 flex-col'>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
