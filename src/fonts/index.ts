@@ -30,7 +30,7 @@ export const supreme = localFont({
       style: 'normal',
     },
     {
-      path: './Supreme-italic.woff2',
+      path: './Supreme-Italic.woff2',
       weight: '400',
       style: 'italic',
     },
