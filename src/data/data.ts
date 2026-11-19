@@ -74,15 +74,15 @@ export const articles: ArticleType[] = [
 ];
 
 export async function getArticles(): Promise<ArticleType[]> {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return articles;
 }
 
-export async function getArticleById(
-  id: string,
+export async function getArticleBySlug(
+  slug: string,
 ): Promise<ArticleType | undefined> {
-  await new Promise((resolve) => setTimeout(resolve, 4000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  return articles.find((article) => article.id === id);
+  return articles.find((article) => article.slug === slug);
 }

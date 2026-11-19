@@ -1,4 +1,4 @@
-import ArticleItem from '@/components/articles/article-item';
+import ArticleCard from '@/components/articles/article-card';
 import { getArticles } from '@/data/data';
 
 async function Articles() {
@@ -7,7 +7,7 @@ async function Articles() {
   return (
     <div className='m-auto flex w-fit flex-col'>
       {fetchedArticles.map((article) => (
-        <ArticleItem key={article.title} article={article} />
+        <ArticleCard key={article.title} article={article} />
       ))}
     </div>
   );

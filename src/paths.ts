@@ -1,5 +1,5 @@
-export const homePage = () => '/';
-export const aboutPage = () => '/about';
+export const homePath = () => '/';
+export const aboutPath = () => '/about';
 
-export const allArticlesPage = () => '/articles';
-export const individualArticlePage = (id: string) => `articles/${id}`;
+export const allArticlesPath = () => '/articles';
+export const individualArticlePath = (slug: string) => `articles/${slug}`;

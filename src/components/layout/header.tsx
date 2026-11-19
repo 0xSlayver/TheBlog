@@ -1,7 +1,7 @@
 import Logo from '@/components/layout/logo';
 import ThemeSwitcher from '@/components/theme/theme-switcher';
 import { Separator } from '@/components/ui/separator';
-import { aboutPage, homePage } from '@/paths';
+import { aboutPath, homePath } from '@/paths';
 import Link from 'next/link';
 
 function header() {
@@ -14,10 +14,10 @@ function header() {
           <nav className='hidden list-none capitalize sm:block'>
             <li className='flex gap-5'>
               <ul>
-                <Link href={homePage()}>home</Link>
+                <Link href={homePath()}>home</Link>
               </ul>
               <ul>
-                <Link href={aboutPage()}>about</Link>
+                <Link href={aboutPath()}>about</Link>
               </ul>
             </li>
           </nav>

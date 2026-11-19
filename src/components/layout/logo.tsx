@@ -1,11 +1,11 @@
-import { homePage } from '@/paths';
+import { homePath } from '@/paths';
 import Link from 'next/link';
 
 function Logo() {
   return (
     <Link
       className='font-heading text-xl font-semibold tracking-wide sm:text-2xl'
-      href={homePage()}
+      href={homePath()}
     >
       <span className='text-green-500'>0x</span>Slayver
     </Link>

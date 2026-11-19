@@ -1,14 +1,14 @@
 import { Separator } from '@/components/ui/separator';
 import { ArticleType } from '@/data/data';
-import { individualArticlePage } from '@/paths';
+import { individualArticlePath } from '@/paths';
 import Link from 'next/link';
 
-function ArticleItem({ article }: { article: ArticleType }) {
+function ArticleCard({ article }: { article: ArticleType }) {
   return (
     <div className='group/allArticles'>
       <Link
         prefetch
-        href={individualArticlePage(article.title)}
+        href={individualArticlePath(article.slug)}
         className='my-1 flex flex-col rounded p-1 transition hover:bg-gray-400/10 sm:p-2 dark:hover:bg-gray-400/5'
       >
         <div className='flex flex-col gap-1'>
@@ -33,4 +33,4 @@ function ArticleItem({ article }: { article: ArticleType }) {
   );
 }
 
-export default ArticleItem;
+export default ArticleCard;
