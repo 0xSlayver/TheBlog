@@ -12,8 +12,6 @@ async function ArticlePage({ params }: ArticlePageProps) {
 
   if (!article) return notFound();
 
-  console.log(article);
-
   return (
     <article className='flex flex-col gap-2.5 py-15'>
       <ArticleMetdata
