@@ -19,7 +19,7 @@ export const articles: ArticleType[] = [
     author: '0xSlayver',
     date: new Date('2026-11-10'),
     category: 'Development',
-    articleContent: `# TypeScript Best Practices in 2026
+    articleContent: `
 
 TypeScript has become the default for serious frontend and full-stack development. Writing it well matters more than ever.
 
@@ -95,8 +95,7 @@ Clean TypeScript is less about fancy features and more about clear, honest model
     author: '0xSlayver',
     date: new Date('2026-11-12'),
     category: 'Development',
-    articleContent: `# A Git Workflow That Actually Scales
-
+    articleContent: `
 Many teams struggle with messy Git history. A simple, consistent workflow solves most of the pain.
 
 ## Core Principles
@@ -172,8 +171,7 @@ Keep branches small. Review fast. Merge often. A clean history is a gift to your
     author: '0xSlayver',
     date: new Date('2026-11-14'),
     category: 'Backend',
-    articleContent: `# API Design Fundamentals
-
+    articleContent: `
 A well-designed API feels obvious. A poorly designed one creates frustration for every consumer.
 
 ## Resource Naming
@@ -263,8 +261,7 @@ Good API design is about empathy. Design for the developer who will consume your
     author: '0xSlayver',
     date: new Date('2026-11-16'),
     category: 'Development',
-    articleContent: `# Effective Debugging Strategies
-
+    articleContent: `
 Debugging is a skill. The better you get at it, the less time you waste staring at broken code.
 
 ## The Debugging Mindset
@@ -326,8 +323,7 @@ Modern tools (VS Code, Chrome DevTools, etc.) are extremely powerful. Learn to u
     author: '0xSlayver',
     date: new Date('2026-11-18'),
     category: 'Productivity',
-    articleContent: `# Building Sustainable Focus
-
+    articleContent: `
 Deep work is becoming rare and valuable. Protecting your focus is a competitive advantage.
 
 ## The Attention Problem
@@ -388,8 +384,7 @@ Focus is a skill. Train it deliberately.`,
     author: '0xSlayver',
     date: new Date('2026-11-20'),
     category: 'Development',
-    articleContent: `# Clean Code Principles That Actually Matter
-
+    articleContent: `
 Clean code is not about perfection. It is about reducing the cost of change.
 
 ## Meaningful Names

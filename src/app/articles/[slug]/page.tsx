@@ -1,4 +1,4 @@
-import ArticleDetails from '@/components/articles/article-details';
+import ArticleContent from '@/components/articles/article-content';
 import ArticleMetdata from '@/components/articles/article-metadata';
 import { getArticleBySlug } from '@/data/data';
 import { notFound } from 'next/navigation';
@@ -24,9 +24,9 @@ async function ArticlePage({ params }: ArticlePageProps) {
         {article.title}
       </h1>
 
-      <ArticleDetails
+      <ArticleContent
         summary={article.summary}
-        articleContent={article.articleContent}
+        content={article.articleContent}
       />
     </article>
   );
