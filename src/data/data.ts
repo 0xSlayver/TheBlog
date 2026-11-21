@@ -8,73 +8,449 @@ export type ArticleType = {
   category: string;
   articleContent: string;
 };
+
 export const articles: ArticleType[] = [
   {
     id: '1',
-    slug: 'understanding-nextjs-app-router-and-server-components',
-    title: 'Understanding Next.js App Router and Server Components',
+    slug: 'typescript-best-practices-2026',
+    title: 'TypeScript Best Practices in 2026',
     summary:
-      'A beginner-friendly guide to how React Server Components reduce bundle sizes and speed up page loads in Next.js.',
+      'Practical TypeScript patterns that improve code quality, readability, and maintainability.',
     author: '0xSlayver',
-    date: new Date('2026-10-12'),
-    category: 'Web Development',
-    articleContent: `Next.js introduced the App Router to make building full-stack React applications faster and more intuitive. By default, every component inside the app directory is a React Server Component.
+    date: new Date('2026-11-10'),
+    category: 'Development',
+    articleContent: `# TypeScript Best Practices in 2026
 
-    This means the component renders entirely on the server before reaching the user's browser. As a result, zero JavaScript is sent to the client for static UI elements, drastically improving initial load times and SEO performance across the board.
+TypeScript has become the default for serious frontend and full-stack development. Writing it well matters more than ever.
 
-    When you need interactivity—like onClick handlers, state management with useState, or browser-only APIs—you simply add the "use client" directive at the top of your file. Mixing server and client components lets you keep heavy logic, database queries, and secret API keys securely on the server while keeping interactive elements snappy on the client.
+## Prefer \`unknown\` Over \`any\`
 
-    Furthermore, the App Router introduces advanced data-fetching patterns, allowing you to fetch data directly inside your server components without needing useEffect or complex state libraries. This streamlines your codebase and makes debugging significantly easier as your project scales.`,
+\`any\` disables type checking. Prefer \`unknown\` and narrow the type:
+
+\`\`\`ts
+function processData(data: unknown) {
+  if (typeof data === 'string') {
+    return data.toUpperCase();
+  }
+  if (Array.isArray(data)) {
+    return data.length;
+  }
+  throw new Error('Unsupported data type');
+}
+\`\`\`
+
+## Use Discriminated Unions
+
+Instead of optional fields or complex conditionals, use a discriminant:
+
+\`\`\`ts
+type Result =
+  | { status: 'success'; data: string }
+  | { status: 'error'; message: string };
+
+function handleResult(result: Result) {
+  if (result.status === 'success') {
+    console.log(result.data);
+  } else {
+    console.error(result.message);
+  }
+}
+\`\`\`
+
+## Prefer \`const\` Assertions and \`as const\`
+
+\`\`\`ts
+const routes = ['/', '/about', '/blog'] as const;
+type Route = (typeof routes)[number]; // '/' | '/about' | '/blog'
+\`\`\`
+
+## Avoid Type Assertions When Possible
+
+Type assertions (\`as\`) should be a last resort. Prefer proper type guards or better modeling.
+
+## Useful Utility Types
+
+| Utility | Purpose |
+| :--- | :--- |
+| \`Partial<T>\` | Makes all properties optional |
+| \`Required<T>\` | Makes all properties required |
+| \`Pick<T, K>\` | Selects specific keys |
+| \`Omit<T, K>\` | Removes specific keys |
+| \`Record<K, V>\` | Creates a map type |
+
+## Final Tips
+
+- Enable \`strict\` mode in \`tsconfig.json\`
+- Prefer interfaces for object shapes that may be extended
+- Prefer type aliases for unions, intersections, and mapped types
+- Keep types close to the code that uses them
+
+Clean TypeScript is less about fancy features and more about clear, honest modeling of your data.`,
   },
   {
     id: '2',
-    slug: 'why-minimalist-workspace-setups-boost-daily-focus',
-    title: 'Why Minimalist Workspace Setups Boost Daily Focus',
-    summary:
-      'Clutter competes for your visual attention. Here is how clearing your desk can improve deep work sessions.',
+    slug: 'git-workflow-that-scales',
+    title: 'A Git Workflow That Actually Scales',
+    summary: 'A practical branching and commit strategy for teams of any size.',
     author: '0xSlayver',
-    date: new Date('2026-10-25'),
-    category: 'Productivity',
-    articleContent: `Your physical environment plays a massive role in your mental clarity and overall productivity. When your desk is covered in sticky notes, tangled cables, and half-empty coffee mugs, your brain is forced to constantly process those items in the background, leading to cognitive fatigue.
+    date: new Date('2026-11-12'),
+    category: 'Development',
+    articleContent: `# A Git Workflow That Actually Scales
 
-    Start by removing everything from your desk except your absolute essentials: your monitor, keyboard, mouse, and a notebook for quick ideas. Route cables neatly underneath the desk using adhesive clips or raceways so they completely stay out of sight.
+Many teams struggle with messy Git history. A simple, consistent workflow solves most of the pain.
 
-    A clean surface creates a distinct psychological boundary between rest and work. When you sit down at an organized, distraction-free desk, your brain receives an immediate signal that it is time to lock in and focus on a single task. Over time, this habit drastically increases your capacity for deep work and reduces burnout.`,
+## Core Principles
+
+1. \`main\` is always deployable
+2. Feature branches are short-lived
+3. Commits tell a story
+4. Pull requests are reviewed before merge
+
+## Recommended Branch Strategy
+
+- \`main\` → production
+- \`develop\` (optional) → integration branch
+- \`feature/*\` → new features
+- \`fix/*\` → bug fixes
+- \`hotfix/*\` → urgent production fixes
+
+## Commit Message Convention
+
+Use a consistent format:
+
+\`\`\`
+type(scope): short description
+
+[optional body]
+\`\`\`
+
+Common types:
+
+- \`feat\`
+- \`fix\`
+- \`refactor\`
+- \`docs\`
+- \`chore\`
+- \`test\`
+
+Example:
+
+\`\`\`
+feat(auth): add password reset flow
+\`\`\`
+
+## Useful Commands
+
+\`\`\`bash
+# Create and switch to a new branch
+git checkout -b feature/user-profile
+
+# Interactive rebase to clean history
+git rebase -i main
+
+# Squash commits before merging
+git merge --squash feature/user-profile
+\`\`\`
+
+## Pull Request Checklist
+
+- [ ] Code compiles and tests pass
+- [ ] No unnecessary comments or debug logs
+- [ ] Meaningful commit messages
+- [ ] Description explains *why*, not just *what*
+- [ ] Screenshots or recordings for UI changes
+
+## Final Advice
+
+Keep branches small. Review fast. Merge often. A clean history is a gift to your future self and your teammates.`,
   },
   {
     id: '3',
-    slug: '5-essential-sql-indexing-tips-for-faster-queries',
-    title: '5 Essential SQL Indexing Tips for Faster Queries',
-    summary:
-      'Learn how database indexes work under the hood and when adding one actually slows down your application.',
+    slug: 'api-design-fundamentals',
+    title: 'API Design Fundamentals',
+    summary: 'How to design clean, predictable, and developer-friendly APIs.',
     author: '0xSlayver',
-    date: new Date('2026-11-02'),
-    category: 'Databases',
-    articleContent: `As your application grows from handling ten records to millions of rows, unoptimized database queries will noticeably degrade your website's performance. An index acts just like the alphabetical index at the back of a textbook, allowing the database engine to jump straight to the correct row instead of performing a costly full-table scan.
+    date: new Date('2026-11-14'),
+    category: 'Backend',
+    articleContent: `# API Design Fundamentals
 
-    Always add indexes to columns you frequently filter, sort, or join by—such as category slugs, user IDs, or publication timestamps. However, you must exercise caution and avoid the temptation of indexing every single column in your schema.
+A well-designed API feels obvious. A poorly designed one creates frustration for every consumer.
 
-    Every time you insert, update, or delete a row, the database must also recalculate and update all associated indexes on that table. Over-indexing can severely degrade write performance, inflate your disk storage usage, and cause unnecessary overhead for your database engine during high-traffic operations.`,
+## Resource Naming
+
+Prefer nouns over verbs:
+
+| Bad | Good |
+| :--- | :--- |
+| \`/getUsers\` | \`/users\` |
+| \`/createPost\` | \`/posts\` |
+| \`/deleteComment\` | \`/comments/{id}\` |
+
+Use HTTP methods correctly:
+
+- \`GET\` → retrieve
+- \`POST\` → create
+- \`PUT\` / \`PATCH\` → update
+- \`DELETE\` → remove
+
+## Consistent Response Shape
+
+Always return a predictable structure:
+
+\`\`\`json
+{
+  "data": { ... },
+  "meta": {
+    "page": 1,
+    "total": 42
+  },
+  "error": null
+}
+\`\`\`
+
+On error:
+
+\`\`\`json
+{
+  "data": null,
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Email is required"
+  }
+}
+\`\`\`
+
+## Versioning
+
+Two common approaches:
+
+1. URL versioning: \`/v1/users\`
+2. Header versioning: \`Accept: application/vnd.api.v1+json\`
+
+URL versioning is simpler for most teams.
+
+## Pagination, Filtering & Sorting
+
+Standard query parameters:
+
+\`\`\`
+GET /posts?page=2&limit=20&sort=-createdAt&status=published
+\`\`\`
+
+## Status Codes Matter
+
+| Code | Meaning |
+| :--- | :--- |
+| 200 | OK |
+| 201 | Created |
+| 204 | No Content |
+| 400 | Bad Request |
+| 401 | Unauthorized |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 422 | Unprocessable Entity |
+| 500 | Internal Server Error |
+
+## Final Thoughts
+
+Good API design is about empathy. Design for the developer who will consume your API at 2 a.m. while debugging production.`,
   },
   {
     id: '4',
-    slug: 'how-to-brew-pour-over-coffee-like-a-specialty-barista',
-    title: 'How to Brew Pour-Over Coffee Like a Specialty Barista',
-    summary:
-      'Master water temperature, grind size, and pouring technique to unlock sweeter, cleaner flavors at home.',
+    slug: 'effective-debugging-strategies',
+    title: 'Effective Debugging Strategies',
+    summary: 'Systematic approaches to finding and fixing bugs faster.',
     author: '0xSlayver',
-    date: new Date('2026-11-09'),
-    category: 'Lifestyle',
-    articleContent: `Great pour-over coffee comes down to precise control over extraction and water flow. If your final cup tastes bitter, dry, and hollow, it is likely over-extracted; conversely, if it tastes sour, salty, and grassy, it suffers from under-extraction.
+    date: new Date('2026-11-16'),
+    category: 'Development',
+    articleContent: `# Effective Debugging Strategies
 
-    Start with fresh specialty beans ground consistently to the size of coarse sea salt. Heat your filtered water to roughly 93°C (200°F)—just below a rolling boil—and always rinse your paper filter with hot water beforehand to eliminate any lingering papery taste and preheat your dripper.
+Debugging is a skill. The better you get at it, the less time you waste staring at broken code.
 
-    Begin with the bloom phase: pour roughly twice the weight of the coffee in water and let it sit for 45 seconds to release trapped carbon dioxide. Afterward, continue pouring the remaining water in slow, steady concentric circles, maintaining a stable water level until you reach your target extraction weight. The result is a remarkably clean, sweet, and complex cup.`,
+## The Debugging Mindset
+
+1. **Reproduce the bug reliably**
+2. **Form a hypothesis**
+3. **Test the hypothesis**
+4. **Fix and verify**
+5. **Prevent recurrence**
+
+## Useful Techniques
+
+### Binary Search the Problem
+
+Comment out or disable large parts of the system until the bug disappears, then narrow down.
+
+### Rubber Duck Debugging
+
+Explain the problem out loud (or to a rubber duck). Many bugs reveal themselves during the explanation.
+
+### Add Strategic Logs
+
+Temporary, well-placed logs are often faster than setting up a full debugger:
+
+\`\`\`ts
+console.log('User before update:', user);
+console.log('Payload received:', payload);
+\`\`\`
+
+### Use the Debugger
+
+Modern tools (VS Code, Chrome DevTools, etc.) are extremely powerful. Learn to use breakpoints, watch expressions, and call stacks.
+
+## Common Categories of Bugs
+
+| Type | Typical Cause |
+| :--- | :--- |
+| Logic errors | Incorrect conditions or calculations |
+| Race conditions | Async timing issues |
+| Null / undefined | Missing null checks |
+| State bugs | Stale or incorrectly updated state |
+| Environment issues | Different behavior between local and production |
+
+## Prevention Is Better
+
+- Write tests for critical paths
+- Use TypeScript strictly
+- Prefer pure functions when possible
+- Keep functions small and focused
+
+> The best debugging session is the one you never have to start.`,
+  },
+  {
+    id: '5',
+    slug: 'building-sustainable-focus',
+    title: 'Building Sustainable Focus',
+    summary:
+      'Practical techniques to protect your attention in a distracted world.',
+    author: '0xSlayver',
+    date: new Date('2026-11-18'),
+    category: 'Productivity',
+    articleContent: `# Building Sustainable Focus
+
+Deep work is becoming rare and valuable. Protecting your focus is a competitive advantage.
+
+## The Attention Problem
+
+Modern tools are designed to interrupt you. Notifications, open tabs, and infinite feeds constantly pull your attention away.
+
+## Practical Techniques
+
+### Time Blocking
+
+Schedule specific blocks for deep work and protect them ruthlessly.
+
+Example daily structure:
+
+| Time | Activity |
+| :--- | :--- |
+| 8:00 – 10:30 | Deep work (no meetings, no Slack) |
+| 10:30 – 11:00 | Break + light communication |
+| 11:00 – 12:30 | Meetings / collaboration |
+| 14:00 – 16:00 | Deep work again |
+
+### Single-Tasking
+
+Multitasking is mostly context switching. Close everything that is not relevant to the current task.
+
+### Environment Design
+
+- Phone in another room
+- Full-screen mode
+- Noise-cancelling headphones or quiet space
+- Clear desk
+
+## The Two-Minute Rule
+
+If something takes less than two minutes, do it immediately. Otherwise, schedule it.
+
+## Recovery Matters
+
+Focus is a finite resource. Sleep, movement, and short breaks restore it.
+
+> You cannot do deep work for 12 hours straight. Four focused hours often produce more than eight distracted ones.
+
+## Final Checklist
+
+- [ ] Identify your peak focus hours
+- [ ] Protect at least one deep work block per day
+- [ ] Reduce notification sources
+- [ ] Review weekly what stole your attention
+
+Focus is a skill. Train it deliberately.`,
+  },
+  {
+    id: '6',
+    slug: 'clean-code-principles',
+    title: 'Clean Code Principles That Actually Matter',
+    summary:
+      'Practical rules for writing code that is easy to read, change, and maintain.',
+    author: '0xSlayver',
+    date: new Date('2026-11-20'),
+    category: 'Development',
+    articleContent: `# Clean Code Principles That Actually Matter
+
+Clean code is not about perfection. It is about reducing the cost of change.
+
+## Meaningful Names
+
+Names should reveal intent:
+
+\`\`\`ts
+// Bad
+const d = 86400000;
+
+// Good
+const MILLISECONDS_IN_A_DAY = 86_400_000;
+\`\`\`
+
+## Small Functions
+
+A function should do one thing and do it well. If you need to scroll to understand it, it is probably too long.
+
+## Avoid Deep Nesting
+
+Prefer early returns:
+
+\`\`\`ts
+function processUser(user?: User) {
+  if (!user) return;
+  if (!user.isActive) return;
+
+  // main logic here
+}
+\`\`\`
+
+## Comments Should Explain Why
+
+Code should explain *what*. Comments should explain *why*.
+
+\`\`\`ts
+// Compensate for the timezone offset because the API returns UTC
+const localDate = new Date(apiDate.getTime() + offset);
+\`\`\`
+
+## Consistency Over Cleverness
+
+Prefer boring, predictable patterns over clever one-liners that only you understand.
+
+## Key Principles Summary
+
+| Principle | Description |
+| :--- | :--- |
+| DRY | Don't Repeat Yourself |
+| KISS | Keep It Simple, Stupid |
+| YAGNI | You Aren't Gonna Need It |
+| Single Responsibility | One reason to change |
+
+## Final Thought
+
+> Code is read far more often than it is written. Optimize for the reader.`,
   },
 ];
 
 export async function getArticles(): Promise<ArticleType[]> {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 500));
 
   return articles;
 }
@@ -82,7 +458,7 @@ export async function getArticles(): Promise<ArticleType[]> {
 export async function getArticleBySlug(
   slug: string,
 ): Promise<ArticleType | undefined> {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 500));
 
   return articles.find((article) => article.slug === slug);
 }

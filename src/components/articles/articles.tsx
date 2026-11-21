@@ -5,7 +5,7 @@ async function Articles() {
   const fetchedArticles = await getArticles();
 
   return (
-    <div className='m-auto flex w-fit flex-col'>
+    <div className='flex w-fit flex-col'>
       {fetchedArticles.map((article) => (
         <ArticleCard key={article.title} article={article} />
       ))}
