@@ -20,8 +20,9 @@ export const articles: ArticleType[] = [
     date: new Date('2026-11-10'),
     category: 'Development',
     articleContent: `
-
 TypeScript has become the default for serious frontend and full-stack development. Writing it well matters more than ever.
+
+![Developer writing TypeScript code](https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200)
 
 ## Prefer \`unknown\` Over \`any\`
 
@@ -85,7 +86,12 @@ Type assertions (\`as\`) should be a last resort. Prefer proper type guards or b
 - Prefer type aliases for unions, intersections, and mapped types
 - Keep types close to the code that uses them
 
-Clean TypeScript is less about fancy features and more about clear, honest modeling of your data.`,
+Clean TypeScript is less about fancy features and more about clear, honest modeling of your data.
+
+### Useful Resources
+- [TypeScript Official Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
+- [Total TypeScript](https://www.totaltypescript.com/)`,
   },
   {
     id: '2',
@@ -97,6 +103,8 @@ Clean TypeScript is less about fancy features and more about clear, honest model
     category: 'Development',
     articleContent: `
 Many teams struggle with messy Git history. A simple, consistent workflow solves most of the pain.
+
+![Git branching visualization](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200)
 
 ## Core Principles
 
@@ -161,7 +169,12 @@ git merge --squash feature/user-profile
 
 ## Final Advice
 
-Keep branches small. Review fast. Merge often. A clean history is a gift to your future self and your teammates.`,
+Keep branches small. Review fast. Merge often. A clean history is a gift to your future self and your teammates.
+
+### Useful Resources
+- [Pro Git Book](https://git-scm.com/book/en/v2)
+- [Conventional Commits](https://www.conventionalcommits.org/)
+- [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow)`,
   },
   {
     id: '3',
@@ -173,6 +186,8 @@ Keep branches small. Review fast. Merge often. A clean history is a gift to your
     category: 'Backend',
     articleContent: `
 A well-designed API feels obvious. A poorly designed one creates frustration for every consumer.
+
+![API and network connections](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200)
 
 ## Resource Naming
 
@@ -251,7 +266,12 @@ GET /posts?page=2&limit=20&sort=-createdAt&status=published
 
 ## Final Thoughts
 
-Good API design is about empathy. Design for the developer who will consume your API at 2 a.m. while debugging production.`,
+Good API design is about empathy. Design for the developer who will consume your API at 2 a.m. while debugging production.
+
+### Useful Resources
+- [RESTful API Design Best Practices](https://restfulapi.net/)
+- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- [JSON:API Specification](https://jsonapi.org/)`,
   },
   {
     id: '4',
@@ -263,6 +283,8 @@ Good API design is about empathy. Design for the developer who will consume your
     category: 'Development',
     articleContent: `
 Debugging is a skill. The better you get at it, the less time you waste staring at broken code.
+
+![Developer debugging code on multiple screens](https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200)
 
 ## The Debugging Mindset
 
@@ -312,7 +334,12 @@ Modern tools (VS Code, Chrome DevTools, etc.) are extremely powerful. Learn to u
 - Prefer pure functions when possible
 - Keep functions small and focused
 
-> The best debugging session is the one you never have to start.`,
+> The best debugging session is the one you never have to start.
+
+### Useful Resources
+- [Chrome DevTools Documentation](https://developer.chrome.com/docs/devtools/)
+- [VS Code Debugging Guide](https://code.visualstudio.com/docs/editor/debugging)
+- [How to Debug Like a Pro](https://www.freecodecamp.org/news/how-to-debug-javascript/)`,
   },
   {
     id: '5',
@@ -325,6 +352,8 @@ Modern tools (VS Code, Chrome DevTools, etc.) are extremely powerful. Learn to u
     category: 'Productivity',
     articleContent: `
 Deep work is becoming rare and valuable. Protecting your focus is a competitive advantage.
+
+![Clean minimal desk for deep work](https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200)
 
 ## The Attention Problem
 
@@ -373,7 +402,12 @@ Focus is a finite resource. Sleep, movement, and short breaks restore it.
 - [ ] Reduce notification sources
 - [ ] Review weekly what stole your attention
 
-Focus is a skill. Train it deliberately.`,
+Focus is a skill. Train it deliberately.
+
+### Useful Resources
+- [Deep Work by Cal Newport](https://www.calnewport.com/books/deep-work/)
+- [Pomodoro Technique](https://todoist.com/productivity-methods/pomodoro-technique)
+- [Focus@Will](https://www.focusatwill.com/)`,
   },
   {
     id: '6',
@@ -386,6 +420,8 @@ Focus is a skill. Train it deliberately.`,
     category: 'Development',
     articleContent: `
 Clean code is not about perfection. It is about reducing the cost of change.
+
+![Clean and organized workspace](https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200)
 
 ## Meaningful Names
 
@@ -440,7 +476,12 @@ Prefer boring, predictable patterns over clever one-liners that only you underst
 
 ## Final Thought
 
-> Code is read far more often than it is written. Optimize for the reader.`,
+> Code is read far more often than it is written. Optimize for the reader.
+
+### Useful Resources
+- [Clean Code by Robert C. Martin](https://www.oreilly.com/library/view/clean-code-a/9780136083238/)
+- [Refactoring Guru](https://refactoring.guru/)
+- [The Pragmatic Programmer](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/)`,
   },
 ];
 

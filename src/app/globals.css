@@ -4,6 +4,8 @@
 
 @plugin '@tailwindcss/typography';
 
+@import 'highlight.js/styles/github-dark.css';
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
