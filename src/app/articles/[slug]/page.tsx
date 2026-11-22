@@ -20,7 +20,7 @@ async function ArticlePage({ params }: ArticlePageProps) {
         date={article.date.toLocaleDateString()}
       />
 
-      <h1 className='font-heading text-2xl font-semibold sm:text-4xl'>
+      <h1 className='font-heading text-2xl font-semibold tracking-wide sm:text-5xl sm:font-bold'>
         {article.title}
       </h1>
 
