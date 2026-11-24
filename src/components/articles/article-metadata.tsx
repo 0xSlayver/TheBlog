@@ -5,10 +5,10 @@ import Link from 'next/link';
 type ArticleAuthorInfoTypes = {
   author: string;
   category: string;
-  date: string;
+  date: Date;
 };
 
-function ArticleMetdata({ author, category, date }: ArticleAuthorInfoTypes) {
+function ArticleMetadata({ author, category, date }: ArticleAuthorInfoTypes) {
   return (
     <div className='flex gap-2.5 tracking-wide'>
       <Link className='hover:underline' href={aboutPath()}>
@@ -17,9 +17,9 @@ function ArticleMetdata({ author, category, date }: ArticleAuthorInfoTypes) {
       <Separator orientation='vertical' />
       <span>{category}</span>
       <Separator orientation='vertical' />
-      <span>{date}</span>
+      <time dateTime={date.toISOString()}>{date.toLocaleDateString()}</time>
     </div>
   );
 }
 
-export default ArticleMetdata;
+export default ArticleMetadata;

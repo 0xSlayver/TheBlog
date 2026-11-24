@@ -1,6 +1,6 @@
 import ArticleContent from '@/components/articles/article-content';
 import ArticleHeader from '@/components/articles/article-header';
-import ArticleMetdata from '@/components/articles/article-metadata';
+import ArticleMetadata from '@/components/articles/article-metadata';
 import { getArticleBySlug } from '@/data/data';
 import { notFound } from 'next/navigation';
 
@@ -14,12 +14,12 @@ async function ArticlePage({ params }: ArticlePageProps) {
   if (!article) return notFound();
 
   return (
-    <article className='flex flex-col gap-2.5 py-15'>
-      <header className='flex flex-col gap-2.5'>
-        <ArticleMetdata
+    <article className='flex flex-col gap-3 py-15'>
+      <header className='flex flex-col gap-2'>
+        <ArticleMetadata
           author={article.author}
           category={article.category}
-          date={article.date.toLocaleDateString()}
+          date={article.date}
         />
 
         <ArticleHeader title={article.title} summary={article.summary} />
