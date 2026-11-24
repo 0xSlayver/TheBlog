@@ -1,7 +1,7 @@
-import { ArticlesSkeleton } from '@/components/articles-skeleton';
+import ArticleSkeleton from '@/components/article-skeleton';
 
 function loading() {
-  return <ArticlesSkeleton />;
+  return <ArticleSkeleton />;
 }
 
 export default loading;

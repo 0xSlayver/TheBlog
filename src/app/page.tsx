@@ -1,4 +1,4 @@
-import { ArticlesSkeleton } from '@/components/articles-skeleton';
+import ArticlesListSkeleton from '@/components/articles-list-skeleton';
 import Articles from '@/components/articles/articles';
 import SectionHeader from '@/components/section-header';
 import { Suspense } from 'react';
@@ -10,7 +10,7 @@ export default function Home() {
         title='Latest Articles'
         description='Here you can find my latest articles that you can read!'
       />
-      <Suspense fallback={<ArticlesSkeleton />}>
+      <Suspense fallback={<ArticlesListSkeleton />}>
         <Articles />
       </Suspense>
     </div>

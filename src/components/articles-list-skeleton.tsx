@@ -1,7 +1,7 @@
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
 
-export function ArticlesSkeleton() {
+function ArticlesListSkeleton() {
   return (
     <div className='m-auto flex w-full flex-col'>
       {[1, 2, 3].map((i) => (
@@ -33,3 +33,5 @@ export function ArticlesSkeleton() {
     </div>
   );
 }
+
+export default ArticlesListSkeleton;
