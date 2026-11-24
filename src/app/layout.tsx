@@ -15,7 +15,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     <html
       lang='en'
       suppressHydrationWarning
-      className={`${chubbo.variable} ${supreme.variable}`}
+      className={`${chubbo.variable} ${supreme.variable} scroll-smooth`}
     >
       <body className='m-auto flex min-h-dvh max-w-3xl flex-col px-4 sm:px-6'>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>

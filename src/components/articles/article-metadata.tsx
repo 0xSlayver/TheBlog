@@ -10,13 +10,15 @@ type ArticleAuthorInfoTypes = {
 
 function ArticleMetdata({ author, category, date }: ArticleAuthorInfoTypes) {
   return (
-    <header className='flex gap-2.5 text-sm'>
-      <Link href={aboutPath()}>{author}</Link>
+    <div className='flex gap-2.5 tracking-wide'>
+      <Link className='hover:underline' href={aboutPath()}>
+        {author}
+      </Link>
       <Separator orientation='vertical' />
       <span>{category}</span>
       <Separator orientation='vertical' />
       <span>{date}</span>
-    </header>
+    </div>
   );
 }
 

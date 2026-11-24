@@ -1,4 +1,5 @@
 import ArticleContent from '@/components/articles/article-content';
+import ArticleHeader from '@/components/articles/article-header';
 import ArticleMetdata from '@/components/articles/article-metadata';
 import { getArticleBySlug } from '@/data/data';
 import { notFound } from 'next/navigation';
@@ -14,20 +15,21 @@ async function ArticlePage({ params }: ArticlePageProps) {
 
   return (
     <article className='flex flex-col gap-2.5 py-15'>
-      <ArticleMetdata
-        author={article.author}
-        category={article.category}
-        date={article.date.toLocaleDateString()}
-      />
+      <header className='flex flex-col gap-2.5'>
+        <ArticleMetdata
+          author={article.author}
+          category={article.category}
+          date={article.date.toLocaleDateString()}
+        />
 
-      <h1 className='font-heading text-2xl font-semibold tracking-wide sm:text-5xl sm:font-bold'>
-        {article.title}
-      </h1>
+        <ArticleHeader title={article.title} summary={article.summary} />
+      </header>
 
-      <ArticleContent
-        summary={article.summary}
-        content={article.articleContent}
-      />
+      <ArticleContent content={article.articleContent} />
+
+      <footer className='text-muted-foreground pt-5 text-center italic'>
+        Thank you for reading 🌹
+      </footer>
     </article>
   );
 }
