@@ -9,7 +9,7 @@ function ArticleCard({ article }: { article: ArticleType }) {
       <Link
         prefetch
         href={individualArticlePath(article.slug)}
-        className='my-1 flex flex-col rounded p-1 transition hover:bg-gray-400/10 sm:p-2 dark:hover:bg-gray-400/5'
+        className='my-1 flex flex-col rounded p-1 duration-150 hover:bg-gray-400/10 sm:p-2 dark:hover:bg-gray-400/5'
       >
         <div className='flex flex-col gap-1'>
           <p className='font-heading text-lg tracking-wide sm:text-xl'>
