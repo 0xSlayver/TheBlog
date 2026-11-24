@@ -1,7 +1,7 @@
 import Logo from '@/components/layout/logo';
 import ThemeSwitcher from '@/components/theme/theme-switcher';
 import { Separator } from '@/components/ui/separator';
-import { aboutPath, homePath } from '@/paths';
+import { aboutPath, allArticlesPath, homePath } from '@/paths';
 import Link from 'next/link';
 
 function header() {
@@ -15,6 +15,9 @@ function header() {
             <li className='flex gap-5'>
               <ul>
                 <Link href={homePath()}>home</Link>
+              </ul>
+              <ul>
+                <Link href={allArticlesPath()}>Articles</Link>
               </ul>
               <ul>
                 <Link href={aboutPath()}>about</Link>
