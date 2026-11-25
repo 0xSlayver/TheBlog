@@ -6,9 +6,8 @@ import DropdownSelect, {
 import { useState } from 'react';
 
 const SORT_OPTIONS: SelectOptionTypes[] = [
-  { label: 'Newest First', value: 'newest' },
-  { label: 'Oldest First', value: 'oldest' },
-  { label: 'Title (A–Z)', value: 'title-asc' },
+  { label: 'Newest', value: 'newest' },
+  { label: 'Oldest', value: 'oldest' },
 ];
 
 function ArticlesSort() {
