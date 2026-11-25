@@ -11,7 +11,7 @@ export default function Home() {
         description='Here you can find my latest articles that you can read!'
       />
       <Suspense fallback={<ArticlesListSkeleton />}>
-        <Articles />
+        <Articles limit={3} />
       </Suspense>
     </div>
   );

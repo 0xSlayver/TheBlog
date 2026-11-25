@@ -1,8 +1,12 @@
 import ArticleCard from '@/components/articles/article-card';
 import { getArticles } from '@/data/data';
 
-async function Articles() {
-  const fetchedArticles = await getArticles(3);
+type ArticlesPropsType = {
+  limit?: number;
+};
+
+async function Articles({ limit }: ArticlesPropsType) {
+  const fetchedArticles = await getArticles(limit);
 
   return (
     <div className='flex w-full flex-col'>
