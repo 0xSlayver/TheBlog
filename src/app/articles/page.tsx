@@ -13,12 +13,16 @@ function AllArticlesPage() {
         <div>
           <SectionHeader title='All Articles' />
         </div>
-        <div className='flex items-center gap-3'>
-          <Suspense>
-            <ArticleSearch />
-          </Suspense>
-          <ArticlesSort />
-          <ArticlesFilter />
+        <div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
+          <div className='flex-1'>
+            <Suspense>
+              <ArticleSearch />
+            </Suspense>
+          </div>
+          <div className='flex items-center gap-3'>
+            <ArticlesSort />
+            <ArticlesFilter />
+          </div>
         </div>
       </div>
 

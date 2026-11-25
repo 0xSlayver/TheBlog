@@ -485,8 +485,10 @@ Prefer boring, predictable patterns over clever one-liners that only you underst
   },
 ];
 
-export async function getArticles(): Promise<ArticleType[]> {
+export async function getArticles(limit?: number): Promise<ArticleType[]> {
   await new Promise((resolve) => setTimeout(resolve, 500));
+
+  if (limit) return articles.slice(0, limit);
 
   return articles;
 }
