@@ -17,7 +17,9 @@ function header() {
                 <Link href={homePath()}>home</Link>
               </ul>
               <ul>
-                <Link href={allArticlesPath()}>Articles</Link>
+                <Link prefetch href={allArticlesPath()}>
+                  Articles
+                </Link>
               </ul>
               <ul>
                 <Link href={aboutPath()}>about</Link>
