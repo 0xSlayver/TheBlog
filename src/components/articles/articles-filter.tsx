@@ -3,7 +3,7 @@
 import DropdownSelect, {
   SelectOptionTypes,
 } from '@/components/dropdown-select';
-import { useState } from 'react';
+import { useQueryState, parseAsString } from 'nuqs';
 
 const CATEGORY_OPTIONS: SelectOptionTypes[] = [
   { label: 'All Categories', value: 'all' },
@@ -14,9 +14,10 @@ const CATEGORY_OPTIONS: SelectOptionTypes[] = [
 ];
 
 function ArticlesFilter() {
-  // edit URL params using nuqs for filtring
-
-  const [category, setCategory] = useState('all');
+  const [category, setCategory] = useQueryState(
+    'category',
+    parseAsString.withDefault('all'),
+  );
 
   return (
     <DropdownSelect
@@ -24,9 +25,7 @@ function ArticlesFilter() {
       placeholder='Filter by category'
       options={CATEGORY_OPTIONS}
       value={category}
-      onValueChange={(val) => {
-        setCategory(val);
-      }}
+      onValueChange={(val) => setCategory(val)}
     />
   );
 }

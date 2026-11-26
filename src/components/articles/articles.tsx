@@ -3,6 +3,9 @@ import { getArticles } from '@/data/data';
 
 type ArticlesPropsType = {
   limit?: number;
+  query?: string;
+  category?: string;
+  sort?: string;
 };
 
 async function Articles({ limit }: ArticlesPropsType) {

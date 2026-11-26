@@ -3,7 +3,7 @@
 import DropdownSelect, {
   SelectOptionTypes,
 } from '@/components/dropdown-select';
-import { useState } from 'react';
+import { useQueryState, parseAsString } from 'nuqs';
 
 const SORT_OPTIONS: SelectOptionTypes[] = [
   { label: 'Newest', value: 'newest' },
@@ -11,9 +11,10 @@ const SORT_OPTIONS: SelectOptionTypes[] = [
 ];
 
 function ArticlesSort() {
-  // edit URL params using nuqs for sorting
-
-  const [sortBy, setSortBy] = useState('newest');
+  const [sortBy, setSortBy] = useQueryState(
+    'sort',
+    parseAsString.withDefault('newest'),
+  );
 
   return (
     <DropdownSelect
@@ -21,9 +22,7 @@ function ArticlesSort() {
       placeholder='Sort articles'
       options={SORT_OPTIONS}
       value={sortBy}
-      onValueChange={(val) => {
-        setSortBy(val);
-      }}
+      onValueChange={(val) => setSortBy(val)}
     />
   );
 }

@@ -46,6 +46,7 @@ function DropdownSelect({
       value={value}
       defaultValue={defaultValue}
       onValueChange={handleValueChange}
+      modal={false}
       // disabled
     >
       <SelectTrigger
