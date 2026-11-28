@@ -1,12 +1,11 @@
+import Link from 'next/link';
 import { Suspense } from 'react';
 
 import HeaderAuth from '@/components/layout/header-auth';
 import Logo from '@/components/layout/logo';
 import ThemeSwitcher from '@/components/theme/theme-switcher';
-
 import { Separator } from '@/components/ui/separator';
 import { aboutPath, allArticlesPath, homePath } from '@/paths';
-import Link from 'next/link';
 
 export default function Header() {
   return (

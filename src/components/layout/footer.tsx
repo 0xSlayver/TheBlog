@@ -1,5 +1,6 @@
-import Logo from '@/components/layout/logo';
 import Link from 'next/link';
+
+import Logo from '@/components/layout/logo';
 
 function Footer() {
   return (

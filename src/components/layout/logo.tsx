@@ -1,5 +1,6 @@
-import { homePath } from '@/paths';
 import Link from 'next/link';
+
+import { homePath } from '@/paths';
 
 function Logo() {
   return (

@@ -1,6 +1,7 @@
+import Link from 'next/link';
+
 import { Separator } from '@/components/ui/separator';
 import { aboutPath } from '@/paths';
-import Link from 'next/link';
 
 type ArticleAuthorInfoTypes = {
   author: string;

@@ -1,10 +1,12 @@
-import type { Metadata } from 'next';
 import './globals.css';
+
+import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
-import { chubbo, supreme } from '@/fonts';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
+
+import Footer from '@/components/layout/footer';
+import Header from '@/components/layout/header';
+import { chubbo, supreme } from '@/fonts';
 
 export const metadata: Metadata = {
   title: '0xSlayver',

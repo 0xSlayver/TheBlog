@@ -1,8 +1,9 @@
 'use server';
 
-import { auth } from '@/lib/auth/auth';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
+
+import { auth } from '@/lib/auth/auth';
 
 export async function signIn(_formData?: FormData): Promise<void> {
   let redirectUrl: string | undefined;

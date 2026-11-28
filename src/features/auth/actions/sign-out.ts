@@ -1,9 +1,10 @@
 'use server';
 
-import { auth } from '@/lib/auth/auth';
 import { revalidatePath } from 'next/cache';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
+
+import { auth } from '@/lib/auth/auth';
 
 export async function signOut(_formData?: FormData): Promise<void> {
   try {

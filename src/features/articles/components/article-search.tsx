@@ -1,6 +1,7 @@
 'use client';
 
-import { parseAsString, useQueryState, debounce } from 'nuqs';
+import { debounce,parseAsString, useQueryState } from 'nuqs';
+
 import { Input } from '@/components/ui/input';
 
 function ArticleSearch() {

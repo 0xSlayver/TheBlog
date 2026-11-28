@@ -1,5 +1,6 @@
-import { allArticlesPath } from '@/paths';
 import Link from 'next/link';
+
+import { allArticlesPath } from '@/paths';
 
 const NotFound = () => {
   return (

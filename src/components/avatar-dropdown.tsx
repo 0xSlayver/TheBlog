@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { ActionButton } from '@/components/action-button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -11,7 +13,6 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { signOut } from '@/features/auth/actions/sign-out';
 import { aboutPath, dashboardPath } from '@/paths';
-import Link from 'next/link';
 
 type AvatarDropdownProps = {
   avatar?: string | null;

@@ -1,9 +1,10 @@
 'use client';
 
+import { parseAsString,useQueryState } from 'nuqs';
+
 import DropdownSelect, {
   SelectOptionTypes,
 } from '@/components/dropdown-select';
-import { useQueryState, parseAsString } from 'nuqs';
 
 const CATEGORY_OPTIONS: SelectOptionTypes[] = [
   { label: 'All Categories', value: 'all' },

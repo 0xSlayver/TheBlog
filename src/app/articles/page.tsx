@@ -1,6 +1,7 @@
-import ArticlesListSkeleton from '@/features/articles/components/articles-list-skeleton';
-import ArticlesPageContent from '@/features/articles/components/articles/articles-page-content';
 import { Suspense } from 'react';
+
+import ArticlesPageContent from '@/features/articles/components/articles/articles-page-content';
+import ArticlesListSkeleton from '@/features/articles/components/articles-list-skeleton';
 
 type Props = {
   searchParams: Promise<{

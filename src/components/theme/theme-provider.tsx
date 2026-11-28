@@ -1,7 +1,7 @@
 'use client';
 
-import { ThemeProvider as BaseThemeProvider } from 'next-themes';
 import type { ThemeProviderProps } from 'next-themes';
+import { ThemeProvider as BaseThemeProvider } from 'next-themes';
 
 function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   const scriptProps =

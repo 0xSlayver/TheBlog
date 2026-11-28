@@ -1,7 +1,8 @@
+import Link from 'next/link';
+
 import { Separator } from '@/components/ui/separator';
 import { ArticleType } from '@/data/data';
 import { individualArticlePath } from '@/paths';
-import Link from 'next/link';
 
 function ArticleCard({ article }: { article: ArticleType }) {
   return (
