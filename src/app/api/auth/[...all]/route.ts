@@ -1,4 +1,4 @@
-import { auth } from '@/lib/auth';
+import { auth } from '@/lib/auth/auth';
 import { toNextJsHandler } from 'better-auth/next-js';
 
 /** Better Auth catch-all route handler — delegates all /api/auth/* requests. */

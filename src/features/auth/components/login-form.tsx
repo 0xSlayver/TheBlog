@@ -1,4 +1,4 @@
-import { signIn } from '@/app/actions/sign-in';
+import { signIn } from '@/features/auth/actions/sign-in';
 
 /**
  * GitHub OAuth login form.

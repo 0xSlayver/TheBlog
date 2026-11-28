@@ -1,11 +1,11 @@
 import { Suspense } from 'react';
 
-import Articles from '@/components/articles/articles';
-import ArticlesFilter from '@/components/articles/articles-filter';
-import ArticlesSort from '@/components/articles/articles-sort';
-import ArticleSearch from '@/components/article-search';
 import SectionHeader from '@/components/section-header';
-import ArticlesListSkeleton from '@/components/articles-list-skeleton';
+import ArticleSearch from '@/features/articles/components/article-search';
+import ArticlesListSkeleton from '@/features/articles/components/articles-list-skeleton';
+import Articles from '@/features/articles/components/articles/articles';
+import ArticlesFilter from '@/features/articles/components/articles/articles-filter';
+import ArticlesSort from '@/features/articles/components/articles/articles-sort';
 
 type ArticlesPageContentProps = {
   searchParams: Promise<{

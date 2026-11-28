@@ -1,7 +1,7 @@
-import ArticleContent from '@/components/articles/article-content';
-import ArticleHeader from '@/components/articles/article-header';
-import ArticleMetadata from '@/components/articles/article-metadata';
 import { getArticleBySlug } from '@/data/data';
+import ArticleContent from '@/features/articles/components/articles/article-content';
+import ArticleHeader from '@/features/articles/components/articles/article-header';
+import ArticleMetadata from '@/features/articles/components/articles/article-metadata';
 import { notFound } from 'next/navigation';
 
 type ArticlePageProps = {

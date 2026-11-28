@@ -1,6 +1,6 @@
-import ArticlesListSkeleton from '@/components/articles-list-skeleton';
-import Articles from '@/components/articles/articles';
 import SectionHeader from '@/components/section-header';
+import ArticlesListSkeleton from '@/features/articles/components/articles-list-skeleton';
+import Articles from '@/features/articles/components/articles/articles';
 import { Suspense } from 'react';
 
 export default function Home() {

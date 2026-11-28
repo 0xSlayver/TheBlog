@@ -1,5 +1,5 @@
-import ArticleCard from '@/components/articles/article-card';
 import { getArticles } from '@/data/data';
+import ArticleCard from '@/features/articles/components/articles/article-card';
 
 type ArticlesPropsType = {
   limit?: number;
