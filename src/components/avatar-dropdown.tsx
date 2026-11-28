@@ -34,10 +34,10 @@ export function AvatarDropdown({ avatar }: AvatarDropdownProps) {
       <DropdownMenuContent className='w-32'>
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <Link href={aboutPath()}>Profile</Link>
+            <Link href={dashboardPath()}>Dashboard</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href={dashboardPath()}>Dashboard</Link>
+            <Link href={aboutPath()}>Profile</Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
